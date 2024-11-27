@@ -1,0 +1,178 @@
+/* Сброс стандартных отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основной стиль для body */
+body {
+    font-family: 'Dancing Script', cursive;
+    min-height: 100vh; /* Позволяет растягиваться содержимому, но не обрезает его */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Сдвигаем элементы наверх, если они не помещаются */
+    align-items: center;
+    background: linear-gradient(135deg, #e0e7ff, #f5f5f5);
+    text-align: center;
+    overflow-y: auto; /* Позволяет прокручивать страницу */
+}
+
+/* Блок с заголовком */
+.arc-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Стиль для заголовка */
+.arc-text h1 {
+    font-size: 8vw; /* Размер шрифта зависит от ширины экрана */
+    font-style: italic;
+    background: linear-gradient(to right, #f1a7a1, #e49ec7);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 20px;
+    letter-spacing: 3px;
+    display: inline-block;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Медиазапросы для адаптации заголовка на маленьких экранах */
+@media (max-width: 600px) {
+    .arc-text h1 {
+        font-size: 12vw; /* уменьшаем размер шрифта на маленьких экранах */
+    }
+}
+
+/* Блок с информацией о дне рождения */
+.birthday-info {
+    text-align: center;
+}
+
+/* Стиль для числа 28 */
+.big-number {
+    font-size: 100px;
+    font-weight: bold;
+    color: #f1a7a1;
+}
+
+/* Стиль для мелкого текста */
+.invitation-text {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Время события */
+.event-time {
+    font-size: 30px;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Ссылка на место сбора */
+.gathering-location {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ff6b81;
+    border: 2px solid #ff6b81;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.gathering-location:hover {
+    background-color: #ff6b81;
+    color: white;
+}
+
+/* Гифка танцующего кота */
+.cat-gif {
+    margin-top: -10px;
+}
+
+.cat-gif img {
+    max-width: 100%; /* Гифка будет адаптироваться под ширину экрана */
+    height: auto;
+}
+
+/* Инструкция пролистать */
+.scroll-text {
+    font-size: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Стиль info.html */
+
+.drescod_info {
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff4f4;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    overflow-y: auto; /* Позволяет прокручивать этот блок, если контент не помещается */
+    max-height: 80vh; /* Ограничение высоты блока, чтобы он не занимал весь экран */
+}
+
+/* Стиль для заголовка "Дресс Код" */
+.drescod_info h2 {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    color: #f1a7a1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Стиль для описания */
+.drescod_info p {
+    font-size: 1.2rem;
+    font-family: 'PT Sans';
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Стили для добавления рамки или линий, если нужно */
+.drescod_info::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid #ff6b81;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+/* Изначальный стиль (жирный и нежно-красный) */
+.click {
+  color: #D6A1A1; /* нежно-красный */
+  font-weight: bold; /* жирный текст */
+  transition: all 0.3s ease; /* плавный переход */
+}
+
+/* При наведении курсора */
+.click:hover {
+  color: #F7A7A7; /* нежно-красный цвет при наведении */
+}
+
+/* При нажатии на элемент */
+.click:active {
+  font-weight: normal; /* обычный шрифт */
+  font-style: normal;  /* без курсива */
+  color: #666;         /* серый цвет при нажатии, как в drescod_info p */
+}
